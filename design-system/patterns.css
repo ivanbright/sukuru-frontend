@@ -1,0 +1,37 @@
+/* Portable design patterns based on repeated source treatments. */
+
+.ds-theme-dark {
+  color: var(--ds-color-paper);
+  background-color: var(--ds-color-charcoal);
+  font-family: var(--ds-font-sans);
+}
+
+.ds-theme-light {
+  color: var(--ds-color-ink);
+  background-color: var(--ds-color-paper);
+}
+
+.ds-label {
+  color: inherit;
+  font-family: var(--ds-font-mono);
+  text-transform: uppercase;
+}
+
+.ds-hairline {
+  border: 1px solid var(--ds-color-border);
+}
+
+.ds-panel-dark {
+  color: var(--ds-color-paper);
+  background-color: var(--ds-color-panel);
+  border: 1px solid var(--ds-color-border);
+}
+
+.ds-panel-paper {
+  color: var(--ds-color-ink);
+  background-color: var(--ds-color-paper);
+}
+
+.ds-accent {
+  color: var(--ds-color-accent);
+}

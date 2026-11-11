@@ -1,0 +1,44 @@
+:root {
+  /* Exact source token IDs and fallback values, extracted from the archive. */
+  --token-524f714d-6a5a-49b0-8a86-37c5ba0fb1eb: #fa6c34;
+  --token-81fde6c0-5ae5-4e1c-b955-b44172892e78: #1d1d1d;
+  --token-b0dfa459-5b1c-4479-ad4f-bd79f909ea50: #2e2e2e;
+  --token-8b167a44-1235-4402-851c-e953878eef1e: #242424;
+  --token-2c1d7bf2-5b9b-4375-bd4e-4c64128453ba: #635d5a80;
+  --token-e27ab790-3f9f-4e68-a3cd-ad8beca145a2: #d6ccba;
+  --token-81fbd4ee-9f37-4860-a4b8-0556944ae843: #2e2e2e1a;
+  --token-f2e60694-aeac-4be1-a99e-157aaf93a9f7: #e9e0d1;
+  --token-daba7ab8-05d8-4738-add7-3175a711e8ff: #1d1d1dbf;
+  --token-e0d0f26a-6caa-4920-8098-3e6f70060c68: #ccbd9f;
+  --token-11d6c711-e39e-4276-bf46-4c528d915d8a: rgb(233, 224, 209);
+  --token-13da6a75-1f90-4b92-b905-75b7f25605ff: rgba(233, 224, 209, 0.5);
+  --token-62efde02-850e-4dc9-a9b1-49365507a3bd: rgb(222, 93, 53);
+  --token-2b5bb842-431e-4a33-978a-b11509d26d6a: #ccbd9f1a;
+  --token-8474f071-6d38-48f7-bae5-5f03886579d4: #1d1d1d40;
+  --token-c83ab94d-13fa-4683-bbcf-86dc33beb649: rgba(29, 29, 29, 0.5);
+  --token-fbc9a446-13c0-4ec9-8a58-255f8b90632c: rgba(46, 46, 46, 0.1);
+  --token-aba4d1e3-868d-4dd2-87d4-522f96c47b44: #424242;
+  --token-cb32bb98-ecb8-4761-aacd-819fcea88624: #635d5a;
+  --token-1badbcad-5fe6-496d-99ff-12c913870ec3: #383838;
+}
+
+:root {
+  /* Readable aliases; each points to a captured Framer token. */
+  --ds-color-accent: var(--token-524f714d-6a5a-49b0-8a86-37c5ba0fb1eb);
+  --ds-color-ink: var(--token-81fde6c0-5ae5-4e1c-b955-b44172892e78);
+  --ds-color-charcoal: var(--token-b0dfa459-5b1c-4479-ad4f-bd79f909ea50);
+  --ds-color-panel: var(--token-8b167a44-1235-4402-851c-e953878eef1e);
+  --ds-color-paper: var(--token-f2e60694-aeac-4be1-a99e-157aaf93a9f7);
+  --ds-color-sand: var(--token-e27ab790-3f9f-4e68-a3cd-ad8beca145a2);
+  --ds-color-sand-deep: var(--token-e0d0f26a-6caa-4920-8098-3e6f70060c68);
+  --ds-color-border: var(--token-2c1d7bf2-5b9b-4375-bd4e-4c64128453ba);
+  --ds-color-accent-hover: var(--token-62efde02-850e-4dc9-a9b1-49365507a3bd);
+  --ds-font-sans: "Geist", "Inter", sans-serif;
+  --ds-font-mono: "IBM Plex Mono", monospace;
+  --ds-breakpoint-tablet: 810px;
+  --ds-breakpoint-desktop: 1280px;
+}
+
+@media (max-width: 809.98px) { :root { --ds-breakpoint-current: mobile; } }
+@media (min-width: 810px) and (max-width: 1279.98px) { :root { --ds-breakpoint-current: tablet; } }
+@media (min-width: 1280px) { :root { --ds-breakpoint-current: desktop; } }
