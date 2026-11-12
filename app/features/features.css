@@ -21,6 +21,11 @@
 .feature-section-heading h2, .feature-plan h2 { margin: 0; color: #e9e0d1; font-size: clamp(30px,4vw,48px); font-weight: 400; letter-spacing: -.05em; line-height: 1.1; }
 .feature-section-heading > p:last-child { margin: 12px 0 0; color: #a8a092; font-size: 13px; }
 .feature-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+.feature-card h3 a { color: inherit; text-decoration: underline; text-decoration-color: #635d5a; text-underline-offset: 4px; }
+.feature-card h3 a:hover { color: #49c86a; text-decoration-color: currentColor; }
+.feature-guides-link { margin: 18px 0 0; font-size: 12px; }
+.feature-guides-link a { color: #d6ccba; text-decoration: underline; text-underline-offset: 3px; }
+.feature-guides-link a:hover { color: #49c86a; }
 .feature-card { min-height: 210px; padding: 22px; border: 1px solid #635d5a80; background: #252525; }
 .feature-number { color: #fa6c34; font: 11px var(--mono); }
 .feature-card h3, .feature-steps h3 { margin: 25px 0 9px; color: #e9e0d1; font-size: 18px; font-weight: 550; letter-spacing: -.02em; }

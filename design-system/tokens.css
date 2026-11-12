@@ -33,7 +33,7 @@
   --ds-color-sand-deep: var(--token-e0d0f26a-6caa-4920-8098-3e6f70060c68);
   --ds-color-border: var(--token-2c1d7bf2-5b9b-4375-bd4e-4c64128453ba);
   --ds-color-accent-hover: var(--token-62efde02-850e-4dc9-a9b1-49365507a3bd);
-  --ds-font-sans: "Geist", "Inter", sans-serif;
+  --ds-font-sans: "Geist", system-ui, sans-serif;
   --ds-font-mono: "IBM Plex Mono", monospace;
   --ds-breakpoint-tablet: 810px;
   --ds-breakpoint-desktop: 1280px;

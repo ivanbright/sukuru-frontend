@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import "./features.css";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://sukuru.cursorclick.dev").replace(/\/$/, "");
@@ -57,6 +57,7 @@ export default function FeaturesPage() {
         <nav aria-label="Main navigation">
           <a href="#features">Features</a>
           <a href="#how-it-works">How it works</a>
+          <Link href="/guides">Shop guides</Link>
           <a href="#questions">Questions</a>
         </nav>
         <Link className="feature-nav-cta" href="/">Sign in / Get started</Link>
@@ -67,7 +68,7 @@ export default function FeaturesPage() {
         <h1>Simple shop management for small businesses in Rwanda.</h1>
         <p className="feature-lede">Sukuru helps shop owners and market traders in Rwanda keep sales, products, and stock records together, so they can spend less time searching through notebooks and more time serving customers.</p>
         <div className="feature-actions">
-          <Link className="feature-primary" href="/">Get started with Sukuru <span aria-hidden="true">→</span></Link>
+          <Link className="feature-primary" href="/">Get started with Sukuru <span aria-hidden="true">&rarr;</span></Link>
           <a className="feature-secondary" href="#features">Explore the features</a>
         </div>
         <p className="feature-note">Start with one business workspace on the Free plan.</p>
@@ -102,9 +103,23 @@ export default function FeaturesPage() {
         </ol>
       </section>
 
+      <section className="feature-section" id="guides" aria-labelledby="guides-title">
+        <div className="feature-section-heading">
+          <p className="feature-kicker">PRACTICAL SHOP ADVICE</p>
+          <h2 id="guides-title">Guides for keeping better shop records.</h2>
+          <p>Simple routines for recording sales and knowing what is in stock.</p>
+        </div>
+        <div className="feature-grid">
+          <article className="feature-card"><span className="feature-number">GUIDE 01</span><h3><Link href="/guides/record-daily-sales">How to record daily sales</Link></h3><p>A straightforward routine for capturing each sale and reviewing the day.</p></article>
+          <article className="feature-card"><span className="feature-number">GUIDE 02</span><h3><Link href="/guides/track-shop-inventory">How to track shop inventory</Link></h3><p>Keep product quantities useful by recording stock received and sales consistently.</p></article>
+          <article className="feature-card"><span className="feature-number">GUIDE 03</span><h3><Link href="/guides/shop-record-keeping">A simple record-keeping routine</Link></h3><p>Build a daily and weekly habit around your shop's sales and stock records.</p></article>
+        </div>
+        <p className="feature-guides-link"><Link href="/guides">See all shop guides <span aria-hidden="true">&rarr;</span></Link></p>
+      </section>
+
       <section className="feature-plan" aria-labelledby="plan-title">
         <div><p className="feature-kicker">SIMPLE TO START</p><h2 id="plan-title">One workspace, free.</h2><p>Use the Free plan for one business workspace and core sales, inventory, product, and report tools. Premium workspace access is available by arrangement.</p></div>
-        <Link className="feature-primary" href="/">Create your account <span aria-hidden="true">→</span></Link>
+        <Link className="feature-primary" href="/">Create your account <span aria-hidden="true">&rarr;</span></Link>
       </section>
 
       <section className="feature-section feature-faq" id="questions" aria-labelledby="questions-title">

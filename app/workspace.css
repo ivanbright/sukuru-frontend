@@ -18,7 +18,7 @@
   --warning: #e5ad43;
   --critical: #d55c7b;
   --mono: "IBM Plex Mono", monospace;
-  --sans: "Geist", "Inter", sans-serif;
+  --sans: "Geist", system-ui, sans-serif;
   --motion: 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
