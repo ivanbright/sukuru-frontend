@@ -4,7 +4,7 @@ Standalone Next.js frontend for the [Sukuru Spring Boot API](https://github.com/
 
 ## Search engine setup
 
-The public sign-in page provides the site's default title, description, canonical URL, Open Graph/Twitter metadata, and Google Search Console verification tag. Authenticated workspace and onboarding routes are marked `noindex`. The generated `/sitemap.xml` includes the public homepage only, and `/robots.txt` points crawlers to it once `NEXT_PUBLIC_SITE_URL` is configured.
+The public sign-in page and `/features` page provide descriptive titles, summaries, canonical URLs, and Open Graph/Twitter metadata. The feature page has a semantic heading hierarchy, internal links, FAQ content, and SoftwareApplication structured data. Authenticated workspace and onboarding routes are marked `noindex`. The generated `/sitemap.xml` includes only the public homepage and feature page, and `/robots.txt` points crawlers to it.
 
 Set these frontend hosting environment variables for production, then redeploy:
 
@@ -14,9 +14,9 @@ Set these frontend hosting environment variables for production, then redeploy:
 After the frontend is deployed on its final HTTPS domain:
 
 1. Add a **Domain** property in [Google Search Console](https://search.google.com/search-console/) and verify it by adding Google's DNS TXT record at your domain provider. This covers the root domain, subdomains, HTTP, and HTTPS. A URL-prefix property with HTML-tag verification is an alternative if you only need one exact origin; put the tag's `content` value in `GOOGLE_SITE_VERIFICATION` and redeploy before clicking Verify.
-2. Check that `https://YOUR-DOMAIN/robots.txt` and `https://YOUR-DOMAIN/sitemap.xml` load publicly. The sitemap currently lists the public sign-in homepage only; the authenticated business screens are private application pages and should not be indexed.
+2. Check that `https://YOUR-DOMAIN/robots.txt` and `https://YOUR-DOMAIN/sitemap.xml` load publicly. The sitemap lists only public pages; the authenticated business screens are private application pages and should not be indexed.
 3. In Search Console, submit `sitemap.xml` in the Sitemaps report. Use URL Inspection to check the public homepage and request indexing if it is eligible. Google decides independently whether and when to index pages.
-4. Review the Page Indexing and Core Web Vitals reports over time. SEO metadata helps Google understand the site, but search visibility also needs useful public content such as a product overview, feature details, pricing information, and original help pages.
+4. Review the Page Indexing and Core Web Vitals reports over time. SEO metadata helps Google understand the site, but search visibility also needs useful public content such as a product overview, feature details, pricing information, and original help pages. The feature page is a start; expand it with original guides as customer questions and search queries become clear.
 
 Keep `NEXT_PUBLIC_SITE_URL` empty in local development unless you are intentionally testing metadata for a specific public origin.
 

@@ -348,7 +348,7 @@ export default function Home() {
           <p>A quick business assistant for the moments between customers.</p>
           <div className="auth-proof"><Icon name="spark" size={17} /> Your business, in good hands.</div>
         </div>
-        <small className="auth-foot">SALES / STOCK / SIMPLE RECORDS</small>
+        <div className="auth-public-links"><small className="auth-foot">SALES / STOCK / SIMPLE RECORDS</small><Link className="auth-feature-link" href="/features">Explore Sukuru</Link></div>
       </div>
       <section className="auth-card">
         <p className="section-kicker">{authMode === "login" ? "WELCOME BACK" : "GET STARTED"}</p>
