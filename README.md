@@ -1,37 +1,45 @@
-# Sukuru business assistant frontend
+# Sukuru
 
-Standalone Next.js frontend for the [Sukuru Spring Boot API](https://github.com/ivanbright/sukuru-backend). The app uses `http://localhost:8080` by default. Set `NEXT_PUBLIC_API_BASE_URL` to the API's base URL when running against another environment. The backend must allow the frontend origin through CORS.
+[Open the live Sukuru app](https://sukuru.cursorclick.dev)
 
-## Search engine setup
+**A simpler way to keep track of your shop.** Sukuru is a small-business management app by [CursorClick](https://cursorclick.dev), for products, stock, sales, purchases, and reports.
 
-The public sign-in page, `/features`, and `/guides` pages provide descriptive titles, summaries, canonical URLs, and Open Graph/Twitter metadata. The feature page has a semantic heading hierarchy, internal links, FAQ content, and SoftwareApplication structured data. Three `/guides/` articles provide original record-keeping advice and Article structured data. Authenticated workspace and onboarding routes are marked `noindex`. The generated `/sitemap.xml` lists only these public pages, and `/robots.txt` points crawlers to it.
-
-Set these frontend hosting environment variables for production, then redeploy:
-
-- `NEXT_PUBLIC_SITE_URL`: the public frontend origin, such as `https://www.example.com` (no trailing slash). Use the final custom domain, not the backend URL.
-- `GOOGLE_SITE_VERIFICATION`: the token from Search Console's HTML-tag verification method, without the surrounding `<meta>` tag. Leave it blank until you receive the token.
-
-After the frontend is deployed on its final HTTPS domain:
-
-1. Add a **Domain** property in [Google Search Console](https://search.google.com/search-console/) and verify it by adding Google's DNS TXT record at your domain provider. This covers the root domain, subdomains, HTTP, and HTTPS. A URL-prefix property with HTML-tag verification is an alternative if you only need one exact origin; put the tag's `content` value in `GOOGLE_SITE_VERIFICATION` and redeploy before clicking Verify.
-2. Check that `https://YOUR-DOMAIN/robots.txt` and `https://YOUR-DOMAIN/sitemap.xml` load publicly. The sitemap lists the sign-in page, public product overview, guide index, and three public guides; authenticated business screens are private application pages and should not be indexed.
-3. In Search Console, submit `sitemap.xml` in the Sitemaps report. Use URL Inspection to check the public homepage and request indexing if it is eligible. Google decides independently whether and when to index pages.
-4. Review the Page Indexing and Core Web Vitals reports over time. SEO metadata helps Google understand the site, but search visibility also needs useful public content such as a product overview, feature details, pricing information, and original help pages. The feature page is a start; expand it with original guides as customer questions and search queries become clear.
-
-Keep `NEXT_PUBLIC_SITE_URL` empty in local development unless you are intentionally testing metadata for a specific public origin.
+This repository contains the Next.js frontend. It connects to the [Sukuru API](https://github.com/ivanbright/sukuru-backend).
 
 ## Run locally
 
-1. Clone and start the API and its PostgreSQL dependency using the [backend setup instructions](https://github.com/ivanbright/sukuru-backend#readme).
-2. Install frontend dependencies with `npm ci`.
-3. Copy `.env.example` to `.env.local` if you need to change the API URL.
-4. Run `npm run dev` and open `http://localhost:3000`.
-5. Sign in with a Sukuru account.
+Start the API first, then from this directory:
 
-The app has separate overview, transactions, inventory, products, reports, business settings, and first-run onboarding routes. These screens share the workspace shell and design-system styles, and read from the existing API. New owner registration signs the owner in and opens a skippable shop setup flow: confirm business details, optionally create a first product, and optionally record opening stock. Sale entry creates a completed sale and its payment. Restock entry creates a draft purchase, receives it into inventory, and records its payment. Each authenticated POST uses an `Idempotency-Key` UUID, and retries reuse the same key to avoid duplicate records. JWT refresh tokens are rotated through the backend refresh endpoint when an access token expires.
+```bash
+npm ci
+npm run dev
+```
 
-This connected frontend focuses on the counter workflow and existing API contracts. It does not include AI or voice capture, and it does not fabricate sales, expense, or stock data when the API is unavailable.
+Open [http://localhost:3000](http://localhost:3000). The app uses `http://localhost:8080` for the API by default. To use another API, set `NEXT_PUBLIC_API_BASE_URL` in `.env.local`. The API must allow the frontend origin through CORS.
 
-API endpoints and contracts are documented in the [backend repository](https://github.com/ivanbright/sukuru-backend/blob/main/API_ENDPOINTS.md). Sukuru subscription billing is not implemented; operational sale and purchase payments are separate.
+## Build
 
-The shared design foundation is included in `design-system/` so the app builds from this repository root. Run `npm run lint` and `npm run build` before deploying. Configure `NEXT_PUBLIC_API_BASE_URL` in the frontend hosting environment and allow that deployed frontend origin in the backend CORS settings.
+```bash
+npm run lint
+npm run build
+```
+
+## Deploy and search
+
+Set `NEXT_PUBLIC_API_BASE_URL` to your deployed API and allow this site's origin in the API's CORS settings. Set `NEXT_PUBLIC_SITE_URL` to the public HTTPS site URL for canonical links and sitemap metadata. If you use Google Search Console's HTML verification, set `GOOGLE_SITE_VERIFICATION` to its token.
+
+The public pages are listed in `/sitemap.xml`; `/robots.txt` points search engines to the sitemap. Submit the sitemap in [Google Search Console](https://search.google.com/search-console/) after the site is live. Indexing and search placement are determined by Google.
+
+## More
+
+The backend repository documents the API in [`API_ENDPOINTS.md`](https://github.com/ivanbright/sukuru-backend/blob/main/API_ENDPOINTS.md). For help, visit [CursorClick](https://cursorclick.dev).
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes - APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` - verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
