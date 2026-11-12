@@ -49,6 +49,8 @@
 .feature-faq details p { max-width: 700px; margin: -4px 0 18px; color: #a8a092; font-size: 12px; line-height: 1.7; }
 .feature-footer { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px clamp(20px,6vw,88px); border-top: 1px solid #635d5a80; }
 .feature-footer > span { color: #817b71; font-size: 11px; }
+.feature-footer .contact-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.feature-footer .contact-links > span { color: #e9e0d1; font-size: 11px; font-weight: 600; }
 @media (max-width: 720px) {
   .feature-nav { flex-wrap: wrap; padding-top: 12px; padding-bottom: 12px; }
   .feature-nav nav { order: 3; width: 100%; justify-content: space-between; }

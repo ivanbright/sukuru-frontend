@@ -43,3 +43,5 @@ This version has breaking changes - APIs, conventions, and file structure may al
 This block is written and re-added by `next dev` - verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+Contact Ivan Bright: [WhatsApp](https://wa.me/250735024932), [mugishaivanbright250@gmail.com](mailto:mugishaivanbright250@gmail.com), or [support@cursorclick.dev](mailto:support@cursorclick.dev).

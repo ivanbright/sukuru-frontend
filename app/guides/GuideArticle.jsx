@@ -42,7 +42,7 @@ export default function GuideArticle({ path, title, description, sections, relat
         </section>
         <aside className="guide-cta"><div><h2>Keep your shop records together.</h2><p>Sukuru brings sales, products, stock, and business reports into one workspace.</p></div><Link className="feature-primary" href="/">Explore Sukuru <span aria-hidden="true">&rarr;</span></Link></aside>
       </article>
-      <footer className="feature-footer"><Link className="feature-brand" href="/features"><span aria-hidden="true">S</span>Sukuru</Link><span>Business records, kept simply.</span><a href="mailto:support@cursorclick.dev?subject=Sukuru%20support">Contact support</a></footer>
+      <footer className="feature-footer"><Link className="feature-brand" href="/features"><span aria-hidden="true">S</span>Sukuru</Link><span>Business records, kept simply.</span><div className="contact-links" aria-label="Contact Ivan Bright"><span>Contact Ivan Bright</span><a href="https://wa.me/250735024932">WhatsApp: +250 735 024 932</a><a href="mailto:mugishaivanbright250@gmail.com">mugishaivanbright250@gmail.com</a><a href="mailto:support@cursorclick.dev">support@cursorclick.dev</a></div></footer>
     </main>
   );
 }

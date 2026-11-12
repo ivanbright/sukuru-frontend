@@ -132,7 +132,12 @@ export default function FeaturesPage() {
       <footer className="feature-footer">
         <Link className="feature-brand" href="/"><span aria-hidden="true">S</span>Sukuru</Link>
         <span>Business records, kept simply.</span>
-        <a href="mailto:support@cursorclick.dev?subject=Sukuru%20support">Contact support</a>
+        <div className="contact-links" aria-label="Contact Ivan Bright">
+          <span>Contact Ivan Bright</span>
+          <a href="https://wa.me/250735024932">WhatsApp: +250 735 024 932</a>
+          <a href="mailto:mugishaivanbright250@gmail.com">mugishaivanbright250@gmail.com</a>
+          <a href="mailto:support@cursorclick.dev">support@cursorclick.dev</a>
+        </div>
       </footer>
     </main>
   );
