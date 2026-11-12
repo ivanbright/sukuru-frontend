@@ -1,6 +1,6 @@
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://sukuru.cursorclick.dev").replace(/\/$/, "");
 const googleVerification = process.env.GOOGLE_SITE_VERIFICATION?.trim();
 
 export const metadata = {

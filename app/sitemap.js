@@ -1,10 +1,9 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://sukuru.cursorclick.dev").replace(/\/$/, "");
 
 export default function sitemap() {
-  if (!siteUrl) return [];
-
   return [{
     url: new URL("/", siteUrl).toString(),
+    lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 1,
   }];
