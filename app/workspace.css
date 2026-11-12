@@ -95,6 +95,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .signout .nav-icon::before { content: none; }
 .nav-badge { min-width: 20px; margin-left: auto; padding: 1px 4px; border: 1px solid #e5ad4350; color: var(--warning); font: 9px var(--mono); font-style: normal; text-align: center; }
 .sidebar-bottom { margin-top: auto; }
+.sidebar-support { display: grid; gap: 4px; margin: 0 6px 10px; color: var(--muted); font-size: 11px; line-height: 1.35; text-decoration: none; transition: color .18s ease; }
+.sidebar-support span { color: var(--quiet); font: 9px var(--mono); overflow-wrap: anywhere; }
+.sidebar-support:hover, .sidebar-support:hover span { color: var(--positive); }
 .signout { width: 100%; }
 .profile { display: flex; align-items: center; gap: 9px; margin-top: 11px; padding: 13px 6px 0; border-top: 1px solid var(--rule-soft); color: inherit; text-decoration: none; transition: color .18s ease; }
 .profile:hover { color: var(--positive); }
@@ -272,6 +275,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .cash-divider { height: 1px; margin: 8px 0; background: var(--rule); }
 .page-footer { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; padding-top: 11px; border-top: 1px solid var(--rule); color: #827b70; font: 8px var(--mono); letter-spacing: .05em; }
 .page-footer i { color: var(--accent); font-style: normal; }
+.page-footer a { color: inherit; text-decoration: none; transition: color .18s ease; }
+.page-footer a:hover { color: var(--positive); }
 
 .inline-error { position: fixed; right: 20px; bottom: 20px; z-index: 15; display: flex; max-width: min(540px,calc(100vw - 32px)); align-items: center; gap: 12px; padding: 12px; border: 1px solid #d55c7b88; background: #292929; color: #f0c3cc; font-size: 11px; }
 .inline-error button { flex: none; padding: 7px 10px; border: 1px solid #d55c7b88; background: #d55c7b18; color: #f0c3cc; cursor: pointer; }
