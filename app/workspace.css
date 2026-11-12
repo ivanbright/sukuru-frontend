@@ -334,6 +334,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .auth-card .primary-button.full:hover { border-color: #514e4a; background: #514e4a; color: white; }
 .auth-switch { margin: 2px 0 0; color: #6f675d; font-size: 10px; text-align: center; }
 .auth-switch button { padding: 0; border: 0; background: none; color: #9b4927; font: 600 10px var(--sans); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.auth-support { margin: 17px 0 0; color: #71695e; font-size: 10px; text-align: center; }
+.auth-support a { color: #9b4927; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
 .text-button { margin-top: 2px; color: var(--sand); font: 9px var(--mono); letter-spacing: .04em; }
 .success-message, .error-message { margin: 0; padding: 9px 10px; border-left: 2px solid var(--positive); background: #49c86a12; color: #c8dec6; font-size: 10px; line-height: 1.45; }
 .error-message { border-left-color: var(--critical); background: #d55c7b12; color: #f0c3cc; }

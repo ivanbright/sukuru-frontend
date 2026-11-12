@@ -376,6 +376,7 @@ export default function Home() {
             <p className="auth-switch">Already have an account? <button type="button" onClick={() => { setAuthMode("login"); setError(""); }}>Sign in</button></p>
           </form>
         )}
+        <p className="auth-support">Need a hand? <a href="mailto:support@cursorclick.dev?subject=Sukuru%20support">Contact support</a></p>
       </section>
     </main>
   );
